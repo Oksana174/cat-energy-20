@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Оксана Андрющенко](https://up.htmlacademy.ru/adaptive/20/user/1479981).
-* Наставник: `Неизвестно`.
+* Наставник: Алина Шаймиева (https://htmlacademy.ru/profile/id74223).
 
 ---
 
