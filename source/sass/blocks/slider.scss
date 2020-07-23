@@ -1,0 +1,46 @@
+.slider__img-after {
+  display: none;
+}
+.slider__img {
+  width: 100%;
+}
+.slider__controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 21px;
+}
+.slider__btn {
+  width: 70px;
+  padding: 10px 5px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $background-color;
+  border: none;
+  cursor: pointer;
+}
+.slider__range-controls {
+  position: relative;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.slider__range-scale {
+  width: 84px;
+  height: 14px;
+  background-color: $white-color;
+  border: 1px solid $special_grey;
+  border-radius: 6px;
+}
+.slider__range-toggle {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 35px;
+  height: 6px;
+  background-color: $basic_green;
+  border-radius: 6px;
+  cursor: pointer;
+}
