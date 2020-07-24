@@ -6,6 +6,7 @@
   width: 320px;
   background-color: $white-color;
   padding: 28px 19px 26px 19px;
+
   &--inner {
     background-color: $basic_grey;
   }
@@ -32,6 +33,7 @@
 .contact__map {
   height: 362px;
   position: relative;
+
   &::before {
     content: "";
     position: absolute;

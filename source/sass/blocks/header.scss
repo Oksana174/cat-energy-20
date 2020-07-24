@@ -6,9 +6,11 @@
 .header__logo-icon {
   display: block;
   margin-bottom: 12px;
+
   &:hover {
     opacity: 0.8;
   }
+
   &:active {
     opacity: 0.6;
   }

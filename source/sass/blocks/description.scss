@@ -11,8 +11,10 @@
 
 .description__item {
   margin-bottom: 24px;
+
   &--leaf {
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -26,8 +28,10 @@
       background-repeat: no-repeat;
     }
   }
+
   &--powder {
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -41,8 +45,10 @@
       background-repeat: no-repeat;
     }
   }
+
   &--dining {
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -56,8 +62,10 @@
       background-repeat: no-repeat;
     }
   }
+
   &--clock {
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
