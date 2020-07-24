@@ -1,7 +1,7 @@
 .contact__box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   width: 320px;
   background-color: $white-color;
@@ -10,6 +10,7 @@
     background-color: $basic_grey;
   }
 }
+
 .contact__info {
   width: 140px;
   font-size: 16px;
@@ -19,6 +20,7 @@
   margin: 0;
   margin-bottom: 4px;
 }
+
 .contact__address {
   width: 140px;
   font-family: "Arial", "Tahoma", sans-serif;
@@ -26,6 +28,7 @@
   font-style: normal;
   color: $special_dark-grey;
 }
+
 .contact__map {
   height: 362px;
   position: relative;
@@ -41,6 +44,7 @@
     background-size: cover;
   }
 }
+
 .contact__img-map {
   width: 320px;
   height: 362px;

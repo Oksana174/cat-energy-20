@@ -1,9 +1,11 @@
 .slider__img-after {
   display: none;
 }
+
 .slider__img {
   width: 100%;
 }
+
 .slider__controls {
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +13,7 @@
   align-items: center;
   margin-top: 21px;
 }
+
 .slider__btn {
   width: 70px;
   padding: 10px 5px;
@@ -22,11 +25,13 @@
   border: none;
   cursor: pointer;
 }
+
 .slider__range-controls {
   position: relative;
   margin-left: 2px;
   margin-right: 2px;
 }
+
 .slider__range-scale {
   width: 84px;
   height: 14px;
@@ -34,6 +39,7 @@
   border: 1px solid $special_grey;
   border-radius: 6px;
 }
+
 .slider__range-toggle {
   position: absolute;
   top: 4px;

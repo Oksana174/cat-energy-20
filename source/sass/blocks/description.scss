@@ -1,12 +1,14 @@
 .description {
   padding: 7px 21px 22px 20px;
 }
+
 .description__list {
   list-style: none;
   margin: 0;
   padding: 0;
   padding-top: 38px;
 }
+
 .description__item {
   margin-bottom: 24px;
   &--leaf {
@@ -70,6 +72,7 @@
     }
   }
 }
+
 .description__text {
   width: 199px;
   margin-left: 80px;

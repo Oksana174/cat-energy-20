@@ -2,18 +2,20 @@
   width: 130px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   list-style: none;
   margin: 0 auto;
   padding: 0;
 }
+
 .social__item {
   margin-right: 34px;
   &:nth-child(3) {
     margin-right: 0;
   }
 }
+
 .social__link {
   display: block;
   &--vkontakte {

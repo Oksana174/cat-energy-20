@@ -2,17 +2,19 @@
   padding: 20px 20px 22px;
   background-color: $basic_grey;
 }
+
 .footer__logo-name {
   display: block;
   text-align: center;
   border-bottom: 1px solid $border_color;
   padding: 19px 0 30px;
-
 }
+
 .footer__social {
   padding: 20px;
   border-bottom: 1px solid $border_color;
 }
+
 .footer__copyright {
   display: flex;
   flex-wrap: wrap;
