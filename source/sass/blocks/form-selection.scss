@@ -69,6 +69,7 @@
   &--comment {
     margin-top: 14px;
   }
+
   &--option {
     margin-top: 27px;
   }
@@ -116,7 +117,6 @@
 }
 
 .form-selection__radio + .form-selection__label--radio {
-
   &::before {
     content: "";
     position: absolute;
@@ -130,7 +130,6 @@
 }
 
 .form-selection__radio:checked + .form-selection__label--radio {
-
   &::after {
     content: "";
     position: absolute;
@@ -146,6 +145,7 @@
 .form-selection__comment {
   width: 280px;
   border: 1px solid $grey_form;
+
   &::placeholder {
     font-size: 16px;
     line-height: 18px;
@@ -156,7 +156,6 @@
 }
 
 .form-selection__checkbox + .form-selection__label--checkbox {
-
   &::before {
     content: "";
     position: absolute;
@@ -169,7 +168,6 @@
 }
 
 .form-selection__checkbox:checked + .form-selection__label--checkbox {
-
   &::after {
     content: "";
     position: absolute;
