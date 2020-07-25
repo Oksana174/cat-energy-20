@@ -1,0 +1,22 @@
+.header__main {
+  position: relative;
+  padding: 12px 23px 0 20px;
+}
+
+.header__logo-icon {
+  display: block;
+  margin-bottom: 12px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+// Убрать меню
+.header__nav--hidden {
+  display: none;
+}
