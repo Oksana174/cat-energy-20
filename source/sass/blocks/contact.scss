@@ -1,15 +1,19 @@
+.contact {
+  width: 320px;
+  margin: 0 auto;
+  background-color: $white-color;
+
+  &--inner {
+    background-color: $basic_grey;
+  }
+}
+
 .contact__box {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  width: 320px;
-  background-color: $white-color;
-  padding: 28px 19px 26px 19px;
-
-  &--inner {
-    background-color: $basic_grey;
-  }
+  padding: 28px 19px 26px;
 }
 
 .contact__info {

@@ -38,7 +38,7 @@
 }
 
 .card-product__list {
-  width: 142px;
+  width: 140px;
   font-family: "Arial", "Tahoma", sans-serif;
   font-size: 12px;
   line-height: 16px;
@@ -80,12 +80,13 @@
   }
 }
 
-.card-product__link-more {
+.card-product__more {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
   color: $text_black;
+  margin: 0;
   margin-top: 10px;
 }
 
