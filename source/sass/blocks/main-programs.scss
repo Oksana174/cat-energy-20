@@ -1,8 +1,27 @@
 .main-programs {
   margin-top: 22px;
+}
+
+.main-programs__block {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+
+  @media screen and (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 82px;
+  }
+}
+
+.main-programs__wrapper {
+  margin-bottom: 20px;
+
+  @media screen and (max-width: $mobile-width-only) {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }

@@ -8,27 +8,27 @@
 </head>
 <body class="page__body">
   <header class="header">
-    <div class="container">
+    <div class="container header__wrapper">
       <div class="header__main">
         <a href="index.html" class="header__logo-icon">
-          <img src="img/logo-mobile.svg" width="190" height="38" alt="Иконка Кэт энерджи">
+          <img class="header__img-logo" src="img/logo-mobile.svg" width="190" height="38" alt="Иконка Кэт энерджи">
         </a>
-        <div class="header__menu hamburger ">
+        <div class="hamburger hamburger--active">
           <span class="visually-hidden">Открыть меню </span>
           <span class="hamburger__line"></span>
           <span class="hamburger__line"></span>
           <span class="hamburger__line"></span>
         </div>
       </div>
-      <nav class="header__nav header__nav--hidden">
-        <ul class="header__nav-list site-list">
-          <li class="site-list__item site-list__item--active">
+      <nav class="main-nav">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a class="site-list__link">Подбор программы</a>
           </li>
         </ul>
@@ -36,57 +36,61 @@
     </div>
   </header>
   <main>
-    <div class="container">
-      <section class="form-selection">
+    <section class="form-selection">
+      <div class="container">
         <h2 class="title form-selection__title">Подбор программы</h2>
         <p class="form-selection__descr">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="form-selection__main" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset class="form-selection__group form-selection__group--info">
-            <legend class="visually-hidden">Информация о вашем питомце</legend>
-            <ul class="form-selection__list">
-              <li class="form-selection__option">
-                <label class="form-selection__label">ИМЯ:*
-                  <input class="form-selection__input form-selection__input--name" type="text" name="name" placeholder="Барсик">
-                </label>
-              </li>
-              <li class="form-selection__option">
-                <label class="form-selection__label">Вес (кг):*
-                  <input class="form-selection__input form-selection__input--weight" type="number" name="weight" placeholder="7">
-                </label>
-              </li>
-              <li class="form-selection__option">
-                <label class="form-selection__label">Возраст (лет):
-                  <input class="form-selection__input form-selection__input--age" type="number" name="age" placeholder="7">
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form-selection__group form-selection__group--program">
-            <legend class="visually-hidden">Выбор программы</legend>
-            <ul class="form-selection__list">
-              <li class="form-selection__option">
-                <input class="visually-hidden form-selection__radio" id="filter-slimming" type="radio" name="program" checked >
-                <label for="filter-slimming" class="form-selection__label form-selection__label--radio">
-                Похудение
-                </label>
-              </li>
-              <li class="form-selection__option">
-                <input class="visually-hidden form-selection__radio" id="filter-set" type="radio" name="program">
-                <label for="filter-set" class="form-selection__label form-selection__label--radio">
-                Набор массы
-                </label>
-              </li>
-              <li class="form-selection__option">
-                <input class="visually-hidden form-selection__radio" id="filter-advice" type="radio" name="program">
-                <label for="filter-advice" class="form-selection__label form-selection__label--radio">
-                Не знаю (Нужен ваш совет)
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="form-selection__wrapper">
+            <fieldset class="form-selection__group form-selection__group--info">
+              <legend class="visually-hidden">Информация о вашем питомце</legend>
+              <ul class="form-selection__list">
+                <li class="form-selection__option">
+                  <label class="form-selection__label">ИМЯ:*
+                    <input class="form-selection__input form-selection__input--name" type="text" name="name" placeholder="Барсик">
+                  </label>
+                </li>
+                <li class="form-selection__option">
+                  <label class="form-selection__label">Вес (кг):*
+                    <input class="form-selection__input form-selection__input--weight" type="number" name="weight" placeholder="7">
+                  </label>
+                </li>
+                <li class="form-selection__option">
+                  <label class="form-selection__label">Возраст (лет):
+                    <input class="form-selection__input form-selection__input--age" type="number" name="age" placeholder="7">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form-selection__group form-selection__group--program">
+              <legend class="visually-hidden">Выбор программы</legend>
+              <ul class="form-selection__list">
+                <li class="form-selection__option form-selection__option--position-program">
+                  <input class="visually-hidden form-selection__radio" id="filter-slimming" type="radio" name="program" checked >
+                  <label for="filter-slimming" class="form-selection__label form-selection__label--radio">
+                  Похудение
+                  </label>
+                </li>
+                <li class="form-selection__option form-selection__option--position-program">
+                  <input class="visually-hidden form-selection__radio" id="filter-set" type="radio" name="program">
+                  <label for="filter-set" class="form-selection__label form-selection__label--radio">
+                  Набор массы
+                  </label>
+                </li>
+                <li class="form-selection__option">
+                  <input class="visually-hidden form-selection__radio" id="filter-advice" type="radio" name="program">
+                  <label for="filter-advice" class="form-selection__label form-selection__label--radio">
+                  Не знаю (Нужен ваш совет)
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
           <fieldset class="form-selection__group form-selection__group--contact">
-            <legend class="form-selection__subtitle">Контактные данные (владельца кота)</legend>
-            <ul class="form-selection__list">
+            <legend class="form-selection__subtitle form-selection__subtitle--location-contact">Контактные данные (владельца кота)</legend>
+            <ul class="form-selection__list form-selection__list--layout">
               <li class="form-selection__option">
                 <label class="form-selection__label">E-mail:*
                   <input class="form-selection__input form-selection__input--email" type="email" name="email" placeholder="kuklachev@gmail.com">
@@ -99,54 +103,60 @@
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="form-selection__group form-selection__group--comment">
-            <legend class="form-selection__subtitle">Комментарий</legend>
+            <legend class="form-selection__subtitle form-selection__subtitle--location-comment">Комментарий</legend>
             <textarea class="form-selection__comment" name="comment" rows="9" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
+
           <fieldset class="form-selection__group form-selection__group--option">
-            <legend class="form-selection__subtitle">Дополнительно</legend>
-            <ul class="form-selection__list">
-              <li class="form-selection__option">
+            <legend class="form-selection__subtitle form-selection__subtitle--location-option">Дополнительно</legend>
+            <ul class="form-selection__list form-selection__list--location">
+              <li class="form-selection__option form-selection__option--position">
                 <input class="visually-hidden  form-selection__checkbox" id="filter-sugar" type="checkbox" name="sugar" checked >
                 <label class="form-selection__label form-selection__label--checkbox" for="filter-sugar">
                 Cахарозаменитель</label>
               </li>
-              <li class="form-selection__option">
+              <li class="form-selection__option form-selection__option--position">
                 <input class="visually-hidden form-selection__checkbox" id="filter-water" type="checkbox" name="water">
                 <label class="form-selection__label form-selection__label--checkbox" for="filter-water">
                 Питьевая вода</label>
               </li>
-              <li class="form-selection__option">
+              <li class="form-selection__option form-selection__option--position">
                 <input class="visually-hidden form-selection__checkbox" id="filter-milk" type="checkbox" name="milk">
                 <label class="form-selection__label form-selection__label--checkbox" for="filter-milk">
                 молоко</label>
               </li>
-              <li class="form-selection__option">
+              <li class="form-selection__option form-selection__option--position">
                 <input class="visually-hidden form-selection__checkbox" id="filter-vitamins" type="checkbox" name="vitamins">
                 <label class="form-selection__label form-selection__label--checkbox" for="filter-vitamins">
                 витамины</label>
               </li>
             </ul>
           </fieldset>
-          <button class="button form-selection__btn" type="submit">отправить заявку</button>
+          <div class="form-selection__block">
+            <button class="button form-selection__btn" type="submit">отправить заявку</button>
+            <small class="form-selection__required">* — Обязательные поля</small>
+          </div>
         </form>
-        <small class="form-selection__required">* — Обязательные поля</small>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <section class="footer__map contact contact--inner">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-      <div class="contact__box">
-        <p class="contact__info">Приглашаем <br> к сотрудничеству дилеров!</p>
-        <address class="contact__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <div class="container">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <div class="contact__box contact__box--inner">
+          <p class="contact__info">Приглашаем <br> к сотрудничеству дилеров!</p>
+          <address class="contact__address">ул. Большая Конюшенная, д. 19/8 <br> <br> Санкт-Петербург</address>
+        </div>
       </div>
       <div class="contact__map">
         <img class="contact__img-map" src="img/bg-map-mobile@1x.png"  alt="Кэт энерджи расположен по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
       </div>
     </section>
     <div class="footer__main">
-      <div class="container">
+      <div class="container footer__wrapper">
         <a class="footer__logo-name" href="index.html">
           <img src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
         </a>
