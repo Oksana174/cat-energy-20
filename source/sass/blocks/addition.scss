@@ -1,4 +1,6 @@
 .addition__title {
+  width: 250px;
+  position: relative;
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
@@ -6,36 +8,45 @@
   margin-top: 30px;
   margin-bottom: 33px;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 103%;
+    width: 100vw;
+    height: 2px;
+    background-color: $basic_green;
+  }
+
   @media screen and (min-width: $tablet-width) {
-    position: relative;
-    width: 360px;
+    width: 410px;
     font-size: 36px;
     line-height: 36px;
-    margin: 68px 36px 80px 37px;
+    margin: 68px 0 80px;
+    padding-left: 37px;
 
     &::before {
       content: "";
       position: absolute;
       top: 22px;
-      left: -235px;
-      width: 200px;
+      right: 100%;
+      width: 100vw;
       height: 2px;
       background-color: $basic_green;
     }
 
     &::after {
-      content: "";
-      position: absolute;
       top: 22px;
-      left: 374px;
-      width: 957px;
-      height: 2px;
-      background-color: $basic_green;
     }
   }
 
   @media screen and (min-width: $desktop-width) {
     margin-top: 76px;
+    padding-left: 0;
+
+    &::before {
+      right: 108%;
+    }
   }
 }
 

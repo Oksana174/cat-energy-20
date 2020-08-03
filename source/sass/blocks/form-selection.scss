@@ -79,10 +79,46 @@
 
   &--contact {
     margin-bottom: 27px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 15px;
+      width: 100vw;
+      height: 2px;
+      background-color: $basic_green;
+    }
   }
 
   &--comment {
     margin-bottom: 27px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 15px;
+      width: 100vw;
+      height: 2px;
+      background-color: $basic_green;
+    }
+  }
+
+  &--option {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 15px;
+      width: 100vw;
+      height: 2px;
+      background-color: $basic_green;
+    }
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -98,16 +134,57 @@
 
     &--contact {
       margin-bottom: 65px;
-      margin-left: 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 15px;
+        right: 100%;
+        width: 100vw;
+        height: 2px;
+        background-color: $basic_green;
+      }
+
+      &::after {
+        top: 22px;
+      }
     }
 
     &--comment {
       margin-bottom: 63px;
-      margin-left: 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 15px;
+        right: 100%;
+        width: 100vw;
+        height: 2px;
+        background-color: $basic_green;
+      }
+
+      &::after {
+        top: 22px;
+      }
     }
 
     &--option {
-      margin-left: 40px;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 15px;
+        right: 100%;
+        width: 100vw;
+        height: 2px;
+        background-color: $basic_green;
+      }
+
+      &::after {
+        top: 22px;
+      }
     }
   }
 
@@ -123,14 +200,26 @@
     &--contact {
       margin-left: 0;
       margin-bottom: 46px;
+
+      &::before {
+        right: 103%;
+      }
     }
 
     &--comment {
       margin-left: 0;
+
+      &::before {
+        right: 103%;
+      }
     }
 
     &--option {
       margin-left: 0;
+
+      &::before {
+        right: 103%;
+      }
     }
   }
 }
@@ -147,18 +236,25 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: flex-start;
+      margin-left: 39px;
+    }
+
+    &--layout {
+      padding-left: 41px;
     }
   }
 
   @media screen and (min-width: $desktop-width) {
     &--location {
       width: auto;
+      margin-left: 0;
     }
 
     &--layout {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      padding-left: 0;
     }
   }
 }
@@ -250,87 +346,47 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
-  padding-right: 20px;
   margin-bottom: 32px;
+  z-index: 2;
   position: relative;
+  background-color: $white-color;
 
   &--location-contact {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 206px;
-      width: 1400px;
-      height: 2px;
-      background-color: $basic_green;
-    }
+    width: 200px;
+    padding-right: 15px;
   }
 
   &--location-comment {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 144px;
-      width: 1400px;
-      height: 2px;
-      background-color: $basic_green;
-    }
+    padding-right: 22px;
   }
 
   &--location-option {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 164px;
-      width: 1400px;
-      height: 2px;
-      background-color: $basic_green;
-    }
+    padding-right: 24px;
   }
 
   @media screen and (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 22px;
-      left: -439px;
-      width: 400px;
-      height: 2px;
-      background-color: $basic_green;
-    }
-
+    padding-left: 39px;
 
     &--location-contact {
-      &::after {
-        top: 22px;
-        left: 560px;
-      }
+      width: auto;
+      padding-right: 42px;
     }
 
     &--location-comment {
-      &::after {
-        top: 22px;
-        left: 232px;
-      }
+      padding-right: 38px;
     }
 
     &--location-option {
-      margin-bottom: 56px;
-
-      &::after {
-        top: 22px;
-        left: 260px;
-      }
+      padding-right: 41px;
     }
   }
 
   @media screen and (min-width: $tablet-width) {
+    padding-left: 0;
+
     &--location-option {
       margin-bottom: 58px;
     }
@@ -481,6 +537,7 @@
   @media screen and (min-width: $tablet-width) {
     width: 631px;
     padding-bottom: 26px;
+    margin-left: 40px;
 
     &::placeholder {
       font-size: 20px;
@@ -492,6 +549,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 1220px;
+    margin-left: 0;
   }
 }
 
