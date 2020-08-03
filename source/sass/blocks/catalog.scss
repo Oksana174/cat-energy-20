@@ -1,9 +1,22 @@
 .catalog {
   border-top: 1px solid $border_color;
   padding-top: 24px;
+
+  @media screen and (min-width: $tablet-width) {
+    border-top: none;
+    padding-top: 65px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 74px;
+  }
 }
 
 .catalog__title {
   margin: 0;
   margin-bottom: 36px;
+
+  @media screen and (min-width: $tablet-width) {
+    margin-bottom: 83px;
+  }
 }

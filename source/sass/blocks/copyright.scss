@@ -1,8 +1,18 @@
+.copyright {
+  @media screen and (min-width: $tablet-width) {
+    width: 163px;
+  }
+}
+
 .copyright__link {
   display: block;
   font-family: "Arial", "Tahoma", sans-serif;
   font-size: 16px;
   color: $special_dark-grey;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-right: 22px;
+  }
 }
 
 .copyright__link-logo {

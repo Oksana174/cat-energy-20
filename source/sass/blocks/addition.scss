@@ -1,10 +1,62 @@
 .addition__title {
+  width: 250px;
+  position: relative;
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
   margin: 0;
   margin-top: 30px;
   margin-bottom: 33px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 103%;
+    width: 100vw;
+    height: 2px;
+    background-color: $basic_green;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 410px;
+    font-size: 36px;
+    line-height: 36px;
+    margin: 68px 0 80px;
+    padding-left: 37px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 100%;
+      width: 100vw;
+      height: 2px;
+      background-color: $basic_green;
+    }
+
+    &::after {
+      top: 22px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-top: 76px;
+    padding-left: 0;
+
+    &::before {
+      right: 108%;
+    }
+  }
+}
+
+.addition__wrapper {
+  @media screen and (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    column-gap: 79px;
+    margin-bottom: 86px;
+  }
 }
 
 .addition__list {
@@ -26,6 +78,23 @@
   &:last-child {
     border-bottom: 1px solid $special_grey;
   }
+
+  @media screen and (min-width: $tablet-width) {
+    border-left: 1px solid $special_grey;
+    border-right: 1px solid $special_grey;
+    padding: 26px 38px 28px 38px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 896px;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0 17px;
+  }
 }
 
 .addition-product__title {
@@ -36,42 +105,132 @@
   color: $text_dark-grey;
   margin: 0;
   text-align: left;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.addition-product__block {
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 27px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 612px;
+    margin-bottom: 0;
+  }
 }
 
 .addition-product__wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-end;
   margin: 13px 0 15px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 230px;
+    margin: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 290px;
+  }
 }
 
 .addition-product__descr {
   font-family: "Arial", "Tahoma", sans-serif;
   line-height: 14px;
   color: $special_dark-grey;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 }
 
 .addition-product__btn {
   font-size: 16px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 632px;
+    line-height: 20px;
+    padding: 9px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 244px;
+    padding: 10px;
+    margin: 0;
+  }
 }
 
 .addition__promo-block {
+  position: relative;
   width: 280px;
-  min-height: 289px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  margin: 38px 0 35px;
+  margin: 38px auto 35px;
+  padding-top: 58px;
+  padding-bottom: 43px;
+
+
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 708px;
+    margin: 69px auto 76px;
+    padding: 60px 124px 60px 80px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 245px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 58px 10px 45px;
+    margin: 0;
+  }
+}
+
+.addition__icon-gift {
+  display: block;
+  fill: $white-color;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .addition__promo-text {
   width: 161px;
   margin: 0 auto;
-  padding-top: 186px;
+  padding-top: 48px;
   font-family: "Arial", "Tahoma", sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   color: $white-color;
   text-align: center;
+
+  @media screen and (min-width: $tablet-width) {
+    padding-top: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-top: 46px;
+    text-align: center;
+  }
 }

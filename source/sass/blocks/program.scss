@@ -1,8 +1,132 @@
 .program {
+  position: relative;
   width: 280px;
   background-color: $basic_grey;
   padding: 21px 15px 22px 20px;
-  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 708px;
+    padding: 77px 28px 53px 52px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 570px;
+    padding: 41px 50px 55px 52px;
+  }
+}
+
+.program--icon-slim {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    background-color: $basic_green;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 29px;
+    width: 36px;
+    height: 50px;
+    background-image: url("../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      left: 446px;
+    }
+
+    &::after {
+      width: 140px;
+      height: 192px;
+      top: 81px;
+      left: 476px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+
+    &::after {
+      width: 70px;
+      height: 97px;
+      top: 41px;
+      left: 67px;
+    }
+  }
+}
+
+.program--icon-pro {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    background-color: $basic_green;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 91px;
+      left: 448px;
+    }
+
+    &::after {
+      width: 268px;
+      height: 112px;
+      top: 135px;
+      left: 412px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+
+    &::after {
+      width: 134px;
+      height: 56px;
+      top: 67px;
+      left: 33px;
+    }
+  }
 }
 
 .program__title {
@@ -11,26 +135,88 @@
   line-height: 37px;
   text-transform: uppercase;
   font-weight: 400;
-  padding-top: 9px;
+  margin-top: 9px;
   margin-left: 71px;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 36px 0 0 162px;
+  }
 }
 
 .program__descr {
   width: 227px;
+  margin: 0;
   margin-top: 30px;
+  font-family: "Arial", "Tahoma", sans-serif;
+  color: $special_dark-grey;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 377px;
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black-color;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 467px;
+    margin-top: 73px;
+  }
 }
 
 .program__line {
   width: 240px;
   margin: 0;
   margin-top: 23px;
+
+  @media screen and (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .program__link {
+  position: relative;
+  width: 134px;
   display: block;
   font-size: 16px;
   line-height: 16px;
   color: $black-color;
   text-transform: uppercase;
-  margin-top: 18px;
+  margin-top: 13px;
+  padding: 4px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 10px;
+    top: 7px;
+    left: 102px;
+    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    width: 168px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 48px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      top: 14px;
+      left: 134px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-top: 23px;
+  }
 }

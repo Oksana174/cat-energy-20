@@ -4,4 +4,9 @@
   font-weight: 400;
   margin: 0;
   color: $black-color;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
