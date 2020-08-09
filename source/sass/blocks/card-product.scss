@@ -51,7 +51,7 @@
     &:last-child {
       border: 2px solid $basic_grey;
       background-image: none;
-      margin-top: 80px;
+      margin-top: 83px;
     }
   }
 
@@ -61,15 +61,28 @@
 }
 
 .card-product__img {
-  @media screen and (min-width: $tablet-width) {
-    width: 168px;
-    height: 200px;
-    text-align: center;
+  &--small {
+    @media screen and (min-width: $tablet-width) {
+      margin-top: 36px;
+      margin-bottom: 34px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-top: 29px;
+      margin-bottom: 42px;
+    }
   }
 
-  @media screen and (min-width: $desktop-width) {
-    width: 172px;
-    height: 196px;
+  &--big {
+    @media screen and (min-width: $tablet-width) {
+      margin-top: 8px;
+      margin-bottom: 26px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-top: 1px;
+      margin-bottom: 34px;
+    }
   }
 }
 
@@ -77,11 +90,7 @@
   margin-top: 10px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-top: 34px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    margin-top: 46px;
+    margin-top: 0;
   }
 }
 
