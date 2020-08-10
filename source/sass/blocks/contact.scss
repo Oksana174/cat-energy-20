@@ -84,30 +84,38 @@
 
 .contact__map {
   position: relative;
+  line-height: 13px;
 
   &::before {
     content: "";
     position: absolute;
     top: 160px;
-    left: 100px;
+    left: 31vw;
     width: 57px;
     height: 53px;
     background-image: url("../img/map-pin.png");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media screen and (min-width: $tablet-width) {
+      width: 113px;
+      height: 106px;
+      top: 146px;
+      left: 43vw;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      top: 131px;
+      left: 63vw;
+    }
   }
 }
 
 .contact__img-map {
-  width: 320px;
+  width: 100vw;
   height: 362px;
 
   @media screen and (min-width: $tablet-width) {
-    width: 768px;
     height: 400px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    width: 100%;
   }
 }
