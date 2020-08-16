@@ -29,6 +29,14 @@
     padding: 0;
     text-align: left;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .footer__social {
@@ -49,6 +57,7 @@
   padding-top: 22px;
 
   @media screen and (min-width: $tablet-width) {
+    width: 163px;
     padding: 0;
   }
 }

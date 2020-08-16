@@ -1,9 +1,3 @@
-.copyright {
-  @media screen and (min-width: $tablet-width) {
-    width: 163px;
-  }
-}
-
 .copyright__link {
   display: block;
   font-family: "Arial", "Tahoma", sans-serif;
@@ -13,8 +7,21 @@
   @media screen and (min-width: $tablet-width) {
     padding-right: 17px;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.copyright__logo path {
+.copyright__logo {
   fill: $logo__color;
+
+  &:hover {
+    fill: $basic_green;
+  }
+
+  &:active {
+    fill: $basic_green;
+    opacity: 0.3;
+  }
 }

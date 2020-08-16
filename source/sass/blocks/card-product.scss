@@ -162,6 +162,14 @@
   &--more {
     background-color: $basic_grey;
     color: $special_dark-grey;
+
+    &:hover {
+      background-color: $special_grey-border;
+    }
+
+    &:active {
+      color: rgba($special_dark-grey, 0.3);
+    }
   }
 
   @media screen and (min-width: $tablet-width) {
