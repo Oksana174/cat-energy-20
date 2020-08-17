@@ -191,6 +191,17 @@
   margin-top: 13px;
   padding: 4px 0;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 10px;
+    top: 7px;
+    left: 102px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
   &:hover {
     &::before {
       background-image: url("../img/icon-right-arrow-verylong.svg");
@@ -203,17 +214,6 @@
     &::before {
       background-image: url("../img/icon-right-arrow-verylong.svg");
     }
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 10px;
-    top: 7px;
-    left: 102px;
-    background-image: url("../img/icon-right-arrow-long.svg");
-    background-repeat: no-repeat;
   }
 
   @media screen and (min-width: $tablet-width) {
