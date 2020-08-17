@@ -18,7 +18,7 @@
   margin-right: 34px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-right: 0;
+    margin-right: 26px;
   }
 
   &:nth-child(3) {
@@ -28,45 +28,38 @@
 
 .social__link {
   display: block;
+}
+
+.social__icon {
+  fill: $logo__color;
+
+  &:hover {
+    fill: $basic_green;
+  }
+
+  &:active {
+    fill: $basic_green;
+    opacity: 0.3;
+  }
 
   &--vkontakte {
-    width: 23px;
-    height: 16px;
-    background-image: url("../img/icon-vk.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-
     @media screen and (min-width: $tablet-width) {
-      width: 30px;
-      height: 22px;
-      margin-right: 28px;
+      width: 29px;
+      height: 17px;
     }
   }
 
   &--instagram {
-    width: 16px;
-    height: 16px;
-    background-image: url("../img/icon-insta.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-
     @media screen and (min-width: $tablet-width) {
       width: 23px;
       height: 23px;
-      margin-right: 26px;
     }
   }
 
   &--facebook {
-    width: 22px;
-    height: 22px;
-    background-image: url("../img/icon-fb.svg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-
     @media screen and (min-width: $tablet-width) {
-      width: 15px;
-      height: 28px;
+      width: 13px;
+      height: 27px;
     }
   }
 }

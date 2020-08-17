@@ -1,24 +1,16 @@
-.form-selection {
-  border-top: 1px solid $border_color;
+.form-selection__title {
+  line-height: 36px;
+  margin-bottom: 37px;
   padding-top: 27px;
 
   @media screen and (min-width: $tablet-width) {
-    border-top: none;
+    line-height: 60px;
+    margin-bottom: 55px;
     padding-top: 64px;
   }
 
   @media screen and (min-width: $desktop-width) {
     padding-top: 77px;
-  }
-}
-
-.form-selection__title {
-  line-height: 36px;
-  margin-bottom: 37px;
-
-  @media screen and (min-width: $tablet-width) {
-    line-height: 60px;
-    margin-bottom: 55px;
   }
 }
 
@@ -319,6 +311,10 @@
   color: $special_dark-grey;
   cursor: pointer;
 
+  &--others {
+    width: 280px;
+  }
+
   &--radio {
     padding-left: 45px;
     padding-top: 7px;
@@ -333,6 +329,10 @@
     font-size: 20px;
     line-height: 30px;
 
+    &--others {
+      width: 630px;
+    }
+
     &--radio {
       padding-left: 60px;
       padding-top: 5px;
@@ -343,15 +343,21 @@
       padding-top: 5;
     }
   }
+
+  @media screen and (min-width: $desktop-width) {
+    &--others {
+      width: 570px;
+    }
+  }
 }
 
 .form-selection__subtitle {
+  position: relative;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
   margin-bottom: 32px;
   z-index: 2;
-  position: relative;
   background-color: $white-color;
 
   &--location-contact {
@@ -430,6 +436,36 @@
     font-size: 16px;
   }
 
+  &:hover {
+    border-color: $special_grey;
+  }
+
+  &:active {
+    border: 2px solid $special_dark-grey;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 14px;
+    outline: none;
+
+    @media screen and (min-width: $tablet-width) {
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 17px;
+    }
+  }
+
+  &:active + .form-selection__icon {
+    fill: $basic_green;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: $basic_red;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) + .form-selection__icon {
+    fill: $basic_red;
+  }
+
   @media screen and (min-width: $tablet-width) {
     padding: 14px 18px;
 
@@ -451,25 +487,25 @@
     }
 
     &--email {
-      width: 555px;
+      width: 549px;
     }
 
     &--phone {
-      width: 535px;
+      width: 528px;
     }
   }
 
   @media screen and (min-width: $desktop-width) {
     &--name {
-      width: 506px;
+      width: 504px;
     }
 
     &--weight {
-      width: 478px;
+      width: 476px;
     }
 
     &--age {
-      width: 436px;
+      width: 435px;
     }
 
     &--email {
@@ -477,7 +513,34 @@
     }
 
     &--phone {
-      width: 472px;
+      width: 468px;
+    }
+  }
+}
+
+.form-selection__icon {
+  fill: $text_dark-grey;
+
+  &--mail {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+
+
+    @media screen and (min-width: $tablet-width) {
+      top: 19px;
+      right: 20px;
+    }
+  }
+
+  &--phone {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+
+    @media screen and (min-width: $tablet-width) {
+      top: 16px;
+      right: 16px;
     }
   }
 }
@@ -492,6 +555,12 @@
     height: 30px;
     border: 2px solid $special_grey;
     border-radius: 50%;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $grey-hover;
+    }
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -528,26 +597,22 @@
 .form-selection__comment {
   width: 280px;
   border: 1px solid $grey_form;
+  padding: 13px 8px 13px 15px;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special_dark-grey;
 
   &::placeholder {
-    font-size: 16px;
-    line-height: 18px;
     text-transform: uppercase;
     color: $special_dark-grey;
-    padding: 13px 8px 13px 13px;
   }
 
   @media screen and (min-width: $tablet-width) {
     width: 631px;
-    padding-bottom: 26px;
+    padding: 10px 19px 26px;
     margin-left: 40px;
-
-    &::placeholder {
-      font-size: 20px;
-      line-height: 30px;
-      padding-top: 8px;
-      padding-left: 17px;
-    }
+    font-size: 20px;
+    line-height: 30px;
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -565,6 +630,12 @@
     width: 30px;
     height: 30px;
     border: 1px solid $special_grey;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $grey-hover;
+    }
   }
 
   @media screen and (min-width: $tablet-width) {

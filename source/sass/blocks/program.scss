@@ -202,6 +202,20 @@
     background-repeat: no-repeat;
   }
 
+  &:hover {
+    &::before {
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::before {
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
+  }
+
   @media screen and (min-width: $tablet-width) {
     width: 168px;
     padding-top: 4px;

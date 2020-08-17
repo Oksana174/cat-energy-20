@@ -23,18 +23,41 @@
   text-align: center;
   border-top: 1px solid $grey-border;
 
+  @media screen and (max-width: $mobile-width-only) {
+    &:last-child {
+      border-bottom: 1px solid $grey-border;
+    }
+  }
+
   @media screen and (min-width: $tablet-width) {
     border-top: none;
+    border-bottom: none;
 
     &--active {
       border-bottom: 2px solid $basic_green;
       padding-bottom: 8px;
+    }
+
+    &:hover:not(.site-list__item--active) {
+      opacity: 0.6;
+      border-bottom: 2px solid $black-color;
+    }
+
+    &:active:not(.site-list__item--active) {
+      opacity: 0.3;
+      border-bottom: 2px solid $black-color;
     }
   }
 
   @media screen and (min-width: $desktop-width) {
     &--active-color {
       border-bottom-color: $white-color;
+    }
+
+    &--desctope {
+      &:hover:not(.site-list__item--active) {
+        border-bottom-color: $white-color;
+      }
     }
   }
 }

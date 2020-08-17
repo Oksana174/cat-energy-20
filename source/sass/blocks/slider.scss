@@ -37,6 +37,16 @@
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted $special_grey;
+
+    &:hover {
+      border-bottom-style: solid;
+      border-bottom-color: rgba($black-color, 0.3);
+    }
+
+    &:active {
+      border-bottom: none;
+      outline: none;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
@@ -100,6 +110,19 @@
       height: 8px;
       background-color: $basic_green;
       border-radius: 50%;
+    }
+
+    &:hover {
+      filter: drop-shadow(0 2px 4px rgba($black-color, 0.19));
+    }
+
+    &:active {
+      filter: drop-shadow(0 3px 5px rgba($black-color, 0.2));
+      border-color: $basic_green;
+
+      &::before {
+        border: 1px solid $basic_green;
+      }
     }
   }
 }

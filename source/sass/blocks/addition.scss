@@ -179,7 +179,7 @@
 
 .addition__promo-block {
   position: relative;
-  width: 280px;
+  width: 100%;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -191,7 +191,6 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
   }
-
 
   @media screen and (min-width: $tablet-width) {
     display: flex;
@@ -229,6 +228,8 @@
 
   @media screen and (min-width: $tablet-width) {
     margin: 0;
+    width: 80px;
+    height: 83px;
   }
 }
 
