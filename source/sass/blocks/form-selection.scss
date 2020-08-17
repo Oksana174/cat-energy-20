@@ -458,6 +458,14 @@
     fill: $basic_green;
   }
 
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: $basic_red;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) + .form-selection__icon {
+    fill: $basic_red;
+  }
+
   @media screen and (min-width: $tablet-width) {
     padding: 14px 18px;
 
