@@ -1,9 +1,25 @@
-.slider__img-after {
-  display: none;
-}
-
 .slider__img {
   width: 100%;
+
+  &--after {
+    display: none;
+
+    @media screen and (min-width: $tablet-width) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.slider__wrapper {
+  @media screen and (min-width: $tablet-width) {
+    // display: flex;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+  }
 }
 
 .slider__controls {

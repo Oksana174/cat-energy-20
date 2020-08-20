@@ -177,10 +177,13 @@
 }
 
 .result__slider {
+  position: relative;
+  margin: 0 auto;
   margin-top: 33px;
 
   @media screen and (min-width: $tablet-width) {
     margin-top: 59px;
+    width: 708px;
   }
 
   @media screen and (min-width: $desktop-width) {

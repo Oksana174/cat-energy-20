@@ -104,7 +104,7 @@ const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("source/img"));
 }
 exports.sprite = sprite;
 
@@ -134,7 +134,6 @@ const build = gulp.series(
   clean,
   copy,
   styles,
-  sprite,
   html
 );
 exports.build = build;
