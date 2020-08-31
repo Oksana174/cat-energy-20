@@ -1,14 +1,15 @@
 .hamburger {
-  display: block;
   position: absolute;
+  display: block;
   right: 0;
-  top: 25px;
+  top: 10px;
   width: 24px;
-  height: 16px;
+  height: 37px;
+  padding-top: 15px;
   cursor: pointer;
 
   &--active {
-    top: 28px;
+    top: 11px;
     right: 0;
   }
 

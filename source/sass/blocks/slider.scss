@@ -1,25 +1,35 @@
-.slider__img {
-  width: 100%;
+.slider__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 33px;
 
-  &--after {
-    display: none;
 
-    @media screen and (min-width: $tablet-width) {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+  @media screen and (min-width: $tablet-width) {
+    width: 708px;
+    min-height: 524px;
+    margin-left: 8px;
+    margin-top: 86px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 690px;
+    min-height: 517px;
+    margin-top: 0;
   }
 }
 
-.slider__wrapper {
-  @media screen and (min-width: $tablet-width) {
-    // display: flex;
-    overflow: hidden;
-    width: 50%;
-    height: 100%;
-  }
+.slider__demo {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__active {
+  display: block;
+}
+
+.slider__change {
+  display: none;
 }
 
 .slider__controls {
@@ -27,20 +37,22 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 21px;
+  margin-top: 33px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-top: 4px;
+    margin-top: 3px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-top: 19px;
+    margin-top: 28px;
+    margin-left: 57px;
   }
 }
 
 .slider__btn {
   padding: 0;
-  margin: 5px 10px;
+  padding-left: 5px;
+  margin: 0 12px;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -53,10 +65,11 @@
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted $special_grey;
+    padding: 5px 0 0;
 
     &:hover {
       border-bottom-style: solid;
-      border-bottom-color: rgba($black-color, 0.3);
+      border-bottom-color: transparentize($black-color, 0.3);
     }
 
     &:active {
@@ -67,6 +80,7 @@
 
   @media screen and (min-width: $desktop-width) {
     background-color: $basic_grey;
+    padding-top: 6px;
   }
 }
 
@@ -77,8 +91,8 @@
 
   @media screen and (min-width: $tablet-width) {
     min-height: 34px;
-    padding-top: 14px;
-    margin: 0 11px 0 14px;
+    padding-top: 18px;
+    margin: 0 7px 0 9px;
   }
 }
 
@@ -88,6 +102,7 @@
   background-color: $white-color;
   border: 1px solid $special_grey;
   border-radius: 6px;
+  margin-left: 4px;
 
   @media screen and (min-width: $tablet-width) {
     width: 428px;
@@ -100,7 +115,7 @@
 .slider__range-toggle {
   position: absolute;
   top: 4px;
-  left: 6px;
+  left: 10px;
   width: 35px;
   height: 6px;
   background-color: $basic_green;
@@ -110,12 +125,12 @@
   @media screen and (min-width: $tablet-width) {
     width: 34px;
     height: 34px;
-    top: 0;
-    left: 197px;
+    top: 4px;
+    left: 200px;
     background-color: $white-color;
     border: 1px solid $special_grey;
     border-radius: 50%;
-    filter: drop-shadow(0 1px 3px rgba($black-color, 0.16));
+    filter: drop-shadow(0 1px 3px transparentize($black-color, 0.16));
 
     &::before {
       content: "";
@@ -129,11 +144,20 @@
     }
 
     &:hover {
-      filter: drop-shadow(0 2px 4px rgba($black-color, 0.19));
+      filter: drop-shadow(0 2px 4px transparentize($black-color, 0.19));
     }
 
     &:active {
-      filter: drop-shadow(0 3px 5px rgba($black-color, 0.2));
+      filter: drop-shadow(0 3px 5px transparentize($black-color, 0.2));
+      border-color: $basic_green;
+
+      &::before {
+        border: 1px solid $basic_green;
+      }
+    }
+
+    &:focus {
+      filter: drop-shadow(0 3px 5px transparentize($black-color, 0.2));
       border-color: $basic_green;
 
       &::before {

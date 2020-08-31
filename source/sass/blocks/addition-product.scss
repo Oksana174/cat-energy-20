@@ -1,0 +1,133 @@
+.addition-product {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.addition-product__item {
+  border-top: 1px solid $special_grey;
+  padding: 12px 0 19px;
+
+  &:last-child {
+    border-bottom: 1px solid $special_grey;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    border-left: 1px solid $special_grey;
+    border-right: 1px solid $special_grey;
+    padding: 26px 38px 28px 38px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 893px;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0 16px;
+  }
+}
+
+.addition-product__title {
+  width: 280px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $text_dark-grey;
+  margin: 0;
+  text-align: left;
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.addition-product__block {
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 26px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 612px;
+    margin-bottom: 0;
+  }
+}
+
+.addition-product__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 13px 0 15px;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 230px;
+    margin: 0;
+    justify-content: flex-end;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 290px;
+    justify-content: space-between;
+  }
+}
+
+.addition-product__descr {
+  font-family: "Arial", "Tahoma", sans-serif;
+  line-height: 14px;
+  color: $special_dark-grey;
+
+  &:nth-child(1) {
+    width: 60%;
+  }
+
+  &:nth-child(2) {
+    width: 40%;
+    text-align: right;
+  }
+
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 16px;
+    text-align: right;
+
+    &:nth-child(1) {
+      width: 60%;
+    }
+
+    &:nth-child(2) {
+      width: 40%;
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    &:nth-child(1) {
+      text-align: left;
+    }
+  }
+}
+
+.addition-product__btn {
+  font-size: 16px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 632px;
+    line-height: 20px;
+    padding: 9px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    width: 244px;
+    padding: 10px;
+    margin: 0;
+  }
+}

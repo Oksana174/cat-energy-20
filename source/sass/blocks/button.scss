@@ -9,9 +9,9 @@
     background-color: $green_btn-hover;
   }
 
-  &:active {
+  &:active, &:focus {
     background-color: $green_btn-hover;
-    color: rgba($white-color, 0.3);
+    color: transparentize($white-color, 0.3);
   }
 
   @media screen and (max-width: $mobile-width-only) {

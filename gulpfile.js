@@ -15,6 +15,17 @@ const del = require("del");
 const uglify = require("gulp-uglify");
 
 
+const sassCss = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest("source/css"));
+}
+exports.sassCss = sassCss;
+
+
 // Styles
 
 const styles = () => {
@@ -47,6 +58,7 @@ exports.html = html;
 const scripts = () => {
   return gulp.src("source/js/**/*.js")
       .pipe(uglify())
+      .pipe(rename("script.min.js"))
       .pipe(gulp.dest("build/js"));
 }
 exports.scripts = scripts;
@@ -71,6 +83,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/js/*.js", gulp.series("scripts"));
 }
 exports.default = gulp.series(
   styles, server, watcher
@@ -85,7 +98,7 @@ const images = () => {
       imagemin.mozjpeg({quality: 90, progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 }
 exports.images = images;
 
@@ -115,7 +128,8 @@ const copy = () => {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source/*.ico"
+    "source/*.ico",
+    "source/css/style.css"
   ], {
     base: "source"
   })
@@ -124,7 +138,7 @@ const copy = () => {
 exports.copy = copy;
 
 const clean = () => {
-  return del("build/**");
+  return del("build");
 }
 exports.clean = clean;
 
@@ -132,9 +146,11 @@ exports.clean = clean;
 
 const build = gulp.series(
   clean,
+  sassCss,
   copy,
   styles,
-  html
+  html,
+  scripts
 );
 exports.build = build;
 

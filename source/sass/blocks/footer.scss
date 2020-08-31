@@ -4,7 +4,7 @@
   background-color: $basic_grey;
 
   @media screen and (min-width: $tablet-width) {
-    padding-top: 55px;
+    padding-top: 57px;
     padding-bottom: 61px;
   }
 }
@@ -22,7 +22,7 @@
   display: block;
   text-align: center;
   border-bottom: 1px solid $border_color;
-  padding: 19px 0 30px;
+  padding: 20px 0 29px;
 
   @media screen and (min-width: $tablet-width) {
     border-bottom: none;
@@ -40,7 +40,7 @@
 }
 
 .footer__social {
-  padding: 20px;
+  padding: 14px;
   border-bottom: 1px solid $border_color;
 
   @media screen and (min-width: $tablet-width) {

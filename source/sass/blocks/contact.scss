@@ -10,8 +10,8 @@
 .contact__box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: top;
   padding: 28px 0 26px;
   background-color: $white-color;
 
@@ -20,14 +20,13 @@
   }
 
   @media screen and (min-width: $tablet-width) {
-    justify-content: space-between;
-    padding: 64px 41px 58px;
+    padding: 64px 41px 62px;
     align-items: flex-start;
   }
 
   @media screen and (min-width: $desktop-width) {
     position: absolute;
-    width: 570px;
+    width: 569px;
     padding-left: 76px;
     padding-right: 89px;
     transform: translateY(95px);
@@ -40,19 +39,17 @@
 }
 
 .contact__info {
-  width: 140px;
+  width: 138px;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 20px;
   text-transform: uppercase;
   color: $text_black;
   margin: 0;
-  margin-bottom: 4px;
 
   @media screen and (min-width: $tablet-width) {
     width: 171px;
     font-size: 20px;
     line-height: 25px;
-    margin-bottom: 0;
   }
 }
 
@@ -63,22 +60,20 @@
   font-style: normal;
   color: $special_dark-grey;
 
-  br {
-    display: none;
-  }
-
   @media screen and (min-width: $tablet-width) {
     width: 159px;
     font-size: 16px;
     text-align: right;
 
-    br {
+    span {
       display: block;
+      transform: translateY(20px);
     }
   }
 
   @media screen and (min-width: $desktop-width) {
     text-align: left;
+    width: 156px;
   }
 }
 
@@ -89,29 +84,44 @@
   &::before {
     content: "";
     position: absolute;
-    top: 160px;
-    left: 31vw;
+    top: 140px;
+    left: 40vw;
     width: 57px;
     height: 53px;
     background-image: url("../img/map-pin.png");
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 3;
 
     @media screen and (min-width: $tablet-width) {
       width: 113px;
       height: 106px;
       top: 146px;
-      left: 43vw;
+      left: 41vw;
     }
 
     @media screen and (min-width: $desktop-width) {
       top: 131px;
-      left: 63vw;
+      left: 61.7vw;
     }
   }
 }
 
+.map-iframe {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 362px;
+
+  @media screen and (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
 .contact__img-map {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 362px;
 
