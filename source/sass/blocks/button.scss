@@ -9,7 +9,8 @@
     background-color: $green_btn-hover;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: $green_btn-hover;
     color: transparentize($white-color, 0.3);
   }

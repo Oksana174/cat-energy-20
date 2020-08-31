@@ -168,7 +168,8 @@
       background-color: $special_grey-border;
     }
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
       color: transparentize($special_dark-grey, 0.3);
     }
   }
@@ -215,7 +216,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    top: 47%;;
+    top: 47%;
   }
 }
 

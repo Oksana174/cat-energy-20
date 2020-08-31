@@ -216,7 +216,8 @@
     }
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     opacity: 0.3;
 
     &::before {
