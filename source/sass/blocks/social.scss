@@ -57,6 +57,8 @@
   }
 
   &--facebook {
+    margin-left: 5px;
+
     @media screen and (min-width: $tablet-width) {
       width: 13px;
       height: 27px;

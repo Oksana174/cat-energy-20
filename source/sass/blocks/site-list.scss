@@ -20,18 +20,20 @@
 }
 
 .site-list__item {
+  margin-left: -20px;
+  margin-right: -20px;
   text-align: center;
   border-top: 1px solid $grey-border;
 
-  @media screen and (max-width: $mobile-width-only) {
-    &:last-child {
-      border-bottom: 1px solid $grey-border;
-    }
-  }
-
   @media screen and (min-width: $tablet-width) {
     border-top: none;
-    border-bottom: none;
+    margin: 0;
+    margin-right: 33px;
+
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+
 
     &--active {
       border-bottom: 2px solid $basic_green;
@@ -50,6 +52,10 @@
   }
 
   @media screen and (min-width: $desktop-width) {
+    &--active {
+      padding-bottom: 6px;
+    }
+
     &--active-color {
       border-bottom-color: $white-color;
     }
@@ -65,7 +71,7 @@
 .site-list__link {
   display: block;
   padding-top: 22px;
-  padding-bottom: 24px;
+  padding-bottom: 23px;
   color: $black-color;
 
   @media screen and (min-width: $tablet-width) {

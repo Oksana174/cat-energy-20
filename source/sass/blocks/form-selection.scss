@@ -10,7 +10,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    padding-top: 77px;
+    padding-top: 187px;
   }
 }
 
@@ -18,7 +18,7 @@
   width: 226px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
 
   @media screen and (min-width: $tablet-width) {
     width: 390px;
@@ -39,7 +39,7 @@
   @media screen and (min-width: $tablet-width) {
     margin: 0;
     margin-left: 40px;
-    margin-bottom: 74px;
+    margin-bottom: 75px;
     width: 630px;
   }
 
@@ -59,7 +59,7 @@
   margin: 0;
 
   &--info {
-    margin-bottom: 21px;
+    margin-bottom: 24px;
   }
 
   &--program {
@@ -71,115 +71,29 @@
 
   &--contact {
     margin-bottom: 27px;
-    position: relative;
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 15px;
-      width: 93vw;
-      height: 2px;
-      background-color: $basic_green;
-    }
   }
 
   &--comment {
-    margin-bottom: 27px;
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-      top: 15px;
-      width: 93vw;
-      height: 2px;
-      background-color: $basic_green;
-    }
-  }
-
-  &--option {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-      top: 15px;
-      width: 93vw;
-      height: 2px;
-      background-color: $basic_green;
-    }
+    margin-bottom: 25px;
   }
 
   @media screen and (min-width: $tablet-width) {
     &--info {
-      margin-bottom: 72px;
+      margin-bottom: 73px;
     }
 
     &--program {
-      width: 628px;
+      width: 631px;
       margin-left: 0;
       padding: 25px 28px 29px;
     }
 
     &--contact {
       margin-bottom: 65px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        top: 22px;
-        right: 100%;
-        width: 100vw;
-        height: 2px;
-        background-color: $basic_green;
-      }
-
-      &::after {
-        top: 22px;
-        width: 96vw;
-      }
     }
 
     &--comment {
       margin-bottom: 63px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        top: 22px;
-        right: 100%;
-        width: 100vw;
-        height: 2px;
-        background-color: $basic_green;
-      }
-
-      &::after {
-        top: 22px;
-        width: 96vw;
-      }
-    }
-
-    &--option {
-      &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        top: 22px;
-        right: 100%;
-        width: 100vw;
-        height: 2px;
-        background-color: $basic_green;
-      }
-
-      &::after {
-        top: 22px;
-        width: 96vw;
-      }
     }
   }
 
@@ -189,31 +103,160 @@
     }
 
     &--program {
-      width: 568px;
+      width: 571px;
     }
 
     &--contact {
-      margin-left: 0;
       margin-bottom: 46px;
+    }
+  }
+}
+
+.form-selection__subtitle {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+  margin-bottom: 32px;
+
+  &--location-contact {
+    position: relative;
+    width: 73%;
+    padding-right: 15px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 15px;
+      left: 100%;
+      width: calc(100vw - 100% - 20px);
+      height: 2px;
+      background-color: $basic_green;
+    }
+  }
+
+  &--location-comment {
+    position: relative;
+    padding-right: 22px;
+    margin-bottom: 35px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 15px;
+      left: 100%;
+      width: calc(100vw - 100% - 20px);
+      height: 2px;
+      background-color: $basic_green;
+    }
+  }
+
+  &--location-option {
+    position: relative;
+    padding-right: 24px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 15px;
+      left: 100%;
+      width: calc(100vw - 100% - 20px);
+      height: 2px;
+      background-color: $basic_green;
+    }
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 76px;
+    padding-left: 40px;
+
+    &--location-contact {
+      width: auto;
+      padding-right: 42px;
 
       &::before {
-        right: 103%;
+        content: "";
+        position: absolute;
+        display: block;
+        top: 22px;
+        right: 100%;
+        width: 100vw;
+        height: 2px;
+        background-color: $basic_green;
+      }
+
+      &::after {
+        top: 22px;
+        width: calc(100vw - 100% - 40px);
       }
     }
 
-    &--comment {
-      margin-left: 0;
+    &--location-comment {
+      padding-right: 38px;
 
       &::before {
-        right: 103%;
+        content: "";
+        position: absolute;
+        display: block;
+        top: 23px;
+        right: 100%;
+        width: 100vw;
+        height: 2px;
+        background-color: $basic_green;
+      }
+
+      &::after {
+        top: 22px;
+        width: calc(100vw - 100% - 40px);
       }
     }
 
-    &--option {
-      margin-left: 0;
+    &--location-option {
+      padding-right: 41px;
+      margin-bottom: 57px;
 
       &::before {
-        right: 103%;
+        content: "";
+        position: absolute;
+        display: block;
+        top: 22px;
+        right: 100%;
+        width: 100vw;
+        height: 2px;
+        background-color: $basic_green;
+      }
+
+      &::after {
+        top: 22px;
+        width: calc(100vw - 100% - 40px);
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-left: 0;
+
+    &--location-contact {
+      &::before {
+        right: calc(100% + 40px);
+      }
+    }
+
+    &--location-comment {
+      &::before {
+        right: calc(100% + 40px);
+      }
+    }
+
+    &--location-option {
+      margin-bottom: 58px;
+
+      &::before {
+        right: calc(100% + 40px);
       }
     }
   }
@@ -229,7 +272,7 @@
       width: 565px;
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-start;
       margin-left: 39px;
     }
@@ -249,6 +292,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-items: flex-start;
       padding-left: 0;
     }
   }
@@ -288,6 +332,8 @@
   }
 
   @media screen and (min-width: $desktop-width) {
+    margin-bottom: 20px;
+
     &--position {
       margin-right: 104px;
 
@@ -297,6 +343,7 @@
 
       &:last-child {
         margin-right: 0;
+        margin-bottom: 20px;
       }
     }
   }
@@ -335,7 +382,7 @@
 
     &--radio {
       padding-left: 60px;
-      padding-top: 5px;
+      padding-top: 4px;
     }
 
     &--checkbox {
@@ -351,83 +398,20 @@
   }
 }
 
-.form-selection__subtitle {
-  position: relative;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 24px;
-  line-height: 26px;
-  margin-bottom: 32px;
-  z-index: 2;
-  background-color: $white-color;
-
-  &--location-contact {
-    width: 200px;
-    padding-right: 15px;
-  }
-
-  &--location-comment {
-    padding-right: 22px;
-  }
-
-  &--location-option {
-    padding-right: 24px;
-  }
-
-  @media screen and (min-width: $tablet-width) {
-    font-size: 36px;
-    line-height: 36px;
-    margin-bottom: 76px;
-    padding-left: 39px;
-
-    &--location-contact {
-      width: auto;
-      padding-right: 42px;
-    }
-
-    &--location-comment {
-      padding-right: 38px;
-    }
-
-    &--location-option {
-      padding-right: 41px;
-    }
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    padding-left: 0;
-
-    &--location-option {
-      margin-bottom: 58px;
-    }
-  }
-}
-
 .form-selection__input {
-  margin-left: 14px;
-  padding: 13px 15px;
+  padding: 13px 15px 12px;
   border: 1px solid $grey_form;
   cursor: pointer;
 
-  &--name {
-    width: 224px;
+  &:valid {
+    border-color: $grey_form;
+    outline: none;
   }
 
-  &--weight {
-    width: 202px;
-  }
-
-  &--age {
-    width: 169px;
-  }
-
-  &--email {
-    width: 212px;
-    border-color: $special_grey;
-  }
-
-  &--phone {
-    width: 195px;
-    border-color: $special_grey;
+  &:-moz-placeholder,
+  &::-moz-placeholder {
+    color: $special_dark-grey;
+    opacity: 1;
   }
 
   &::placeholder {
@@ -436,34 +420,58 @@
     font-size: 16px;
   }
 
+  &--name {
+    width: 228px;
+    margin-left: 10px;
+  }
+
+  &--weight {
+    width: 203px;
+    margin-left: 13px;
+  }
+
+  &--age {
+    width: 171px;
+    margin-left: 12px;
+  }
+
+  &--email {
+    width: 219px;
+    border-color: $special_grey;
+    margin-left: 7px;
+  }
+
+  &--phone {
+    width: 202px;
+    border-color: $special_grey;
+    margin-left: 7px;
+  }
+
   &:hover {
     border-color: $special_grey;
   }
 
-  &:active {
-    border: 2px solid $special_dark-grey;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 14px;
-    outline: none;
-
-    @media screen and (min-width: $tablet-width) {
-      padding-top: 13px;
-      padding-bottom: 13px;
-      padding-left: 17px;
-    }
-  }
-
-  &:active + .form-selection__icon {
-    fill: $basic_green;
-  }
-
-  &:invalid:not(:focus):not(:placeholder-shown) {
+  &:invalid:focus {
     border-color: $basic_red;
   }
 
-  &:invalid:not(:focus):not(:placeholder-shown) + .form-selection__icon {
+  &:invalid:focus + .form-selection__icon {
     fill: $basic_red;
+  }
+
+  &:focus {
+    border-color: $special_dark-grey;
+    outline: none;
+  }
+
+  &:active:invalid,
+  &:active:valid {
+    outline: 2px solid $special_dark-grey;
+    border-color: $special_dark-grey;
+  }
+
+  &:active:focus + .form-selection__icon {
+    fill: $basic_green;
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -475,23 +483,28 @@
     }
 
     &--name {
-      width: 564px;
+      width: 565px;
+      margin-left: 13px;
     }
 
     &--weight {
-      width: 536px;
+      width: 534px;
+      margin-left: 16px;
     }
 
     &--age {
       width: 495px;
+      margin-left: 14px;
     }
 
     &--email {
-      width: 549px;
+      width: 548px;
+      margin-left: 15px;
     }
 
     &--phone {
-      width: 528px;
+      width: 533px;
+      margin-left: 9px;
     }
   }
 
@@ -501,19 +514,21 @@
     }
 
     &--weight {
-      width: 476px;
+      width: 474px;
     }
 
     &--age {
       width: 435px;
+      margin-left: 13px;
     }
 
     &--email {
-      width: 486px;
+      width: 487px;
+      margin-left: 16px;
     }
 
     &--phone {
-      width: 468px;
+      width: 472px;
     }
   }
 }
@@ -572,6 +587,16 @@
   }
 }
 
+.form-selection__radio {
+  &:focus + .form-selection__label--radio {
+    opacity: 0.3;
+  }
+
+  &:active + .form-selection__label--radio {
+    opacity: 0.3;
+  }
+}
+
 .form-selection__radio:checked + .form-selection__label--radio {
   &::after {
     content: "";
@@ -582,6 +607,12 @@
     height: 13px;
     background-color: $basic_green;
     border-radius: 50%;
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -597,7 +628,7 @@
 .form-selection__comment {
   width: 280px;
   border: 1px solid $grey_form;
-  padding: 13px 8px 13px 15px;
+  padding: 13px 8px 48px 15px;
   font-size: 16px;
   line-height: 18px;
   color: $special_dark-grey;
@@ -609,7 +640,7 @@
 
   @media screen and (min-width: $tablet-width) {
     width: 631px;
-    padding: 10px 19px 26px;
+    padding: 10px 19px 15px;
     margin-left: 40px;
     font-size: 20px;
     line-height: 30px;
@@ -646,6 +677,16 @@
   }
 }
 
+.form-selection__checkbox {
+  &:focus + .form-selection__label--checkbox {
+    color: transparentize($special_dark-grey, 0.3);
+
+    &::before {
+      border-color: transparentize($special_grey, 0.3);
+    }
+  }
+}
+
 .form-selection__checkbox:checked + .form-selection__label--checkbox {
   &::after {
     content: "";
@@ -668,7 +709,7 @@
 }
 
 .form-selection__block {
-  margin-top: 40px;
+  margin-top: 39px;
   margin-bottom: 32px;
 
   @media screen and (min-width: $tablet-width) {
@@ -682,7 +723,7 @@
 
   @media screen and (min-width: $desktop-width) {
     margin-left: 0;
-    margin-top: 29px;
+    margin-top: 45px;
     margin-bottom: 82px;
   }
 }
@@ -691,6 +732,7 @@
   border: none;
   font-size: 16px;
   line-height: 20px;
+  cursor: pointer;
 
   @media screen and (min-width: $tablet-width) {
     width: 282px;
@@ -712,7 +754,7 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
-  margin-top: 21px;
+  margin-top: 20px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 16px;

@@ -1,8 +1,8 @@
 .program {
   position: relative;
-  width: 280px;
+  width: 100%;
   background-color: $basic_grey;
-  padding: 21px 15px 22px 20px;
+  padding: 21px 15px 18px 20px;
 
   @media screen and (min-width: $tablet-width) {
     width: 708px;
@@ -136,7 +136,7 @@
   text-transform: uppercase;
   font-weight: 400;
   margin-top: 9px;
-  margin-left: 71px;
+  margin-left: 70px;
 
   @media screen and (min-width: $tablet-width) {
     font-size: 36px;
@@ -152,7 +152,7 @@
 .program__descr {
   width: 227px;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 31px;
   font-family: "Arial", "Tahoma", sans-serif;
   color: $special_dark-grey;
 
@@ -162,11 +162,19 @@
     font-size: 16px;
     line-height: 24px;
     color: $black-color;
+
+    &--size {
+      width: 340px;
+    }
   }
 
   @media screen and (min-width: $desktop-width) {
     width: 467px;
     margin-top: 73px;
+
+    &--size {
+      width: 458px;
+    }
   }
 }
 
@@ -208,7 +216,8 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
     opacity: 0.3;
 
     &::before {

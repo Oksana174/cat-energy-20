@@ -5,14 +5,14 @@
   line-height: 24px;
   font-weight: normal;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 28px;
   margin-bottom: 33px;
 
   &::after {
     content: "";
     position: absolute;
-    top: 15px;
-    left: 98%;
+    top: 14px;
+    left: 100%;
     width: 53px;
     height: 2px;
     background-color: $basic_green;
@@ -22,7 +22,7 @@
     width: 410px;
     font-size: 36px;
     line-height: 36px;
-    margin: 68px 0 80px;
+    margin: 69px 0 80px;
     padding-left: 37px;
 
     &::before {
@@ -42,7 +42,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-top: 76px;
+    margin-top: 75px;
     padding-left: 0;
 
     &::before {
@@ -71,118 +71,10 @@
   flex-direction: column;
 }
 
-.addition-product {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.addition-product__item {
-  border-top: 1px solid $special_grey;
-  padding: 12px 0 19px;
-
-  &:last-child {
-    border-bottom: 1px solid $special_grey;
-  }
-
-  @media screen and (min-width: $tablet-width) {
-    border-left: 1px solid $special_grey;
-    border-right: 1px solid $special_grey;
-    padding: 26px 38px 28px 38px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 896px;
-    border-left: none;
-    border-right: none;
-    padding: 15px 0 17px;
-  }
-}
-
-.addition-product__title {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: $text_dark-grey;
-  margin: 0;
-  text-align: left;
-
-  @media screen and (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
-
-.addition-product__block {
-  @media screen and (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 27px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    width: 612px;
-    margin-bottom: 0;
-  }
-}
-
-.addition-product__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin: 13px 0 15px;
-
-  @media screen and (min-width: $tablet-width) {
-    width: 230px;
-    margin: 0;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    width: 290px;
-  }
-}
-
-.addition-product__descr {
-  font-family: "Arial", "Tahoma", sans-serif;
-  line-height: 14px;
-  color: $special_dark-grey;
-
-  @media screen and (min-width: $tablet-width) {
-    font-size: 16px;
-  }
-}
-
-.addition-product__btn {
-  font-size: 16px;
-  margin: 0 auto;
-
-  @media screen and (min-width: $tablet-width) {
-    width: 632px;
-    line-height: 20px;
-    padding: 9px;
-  }
-
-  @media screen and (min-width: $desktop-width) {
-    width: 244px;
-    padding: 10px;
-    margin: 0;
-  }
-}
-
 .addition__promo-block {
   position: relative;
   width: 100%;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: $basic_green url("../img/gift-photo-mobile@1x.jpg") center center no-repeat;
   background-size: cover;
   margin: 38px auto 35px;
   padding-top: 58px;
@@ -199,7 +91,7 @@
     justify-content: space-between;
     width: 708px;
     margin: 69px auto 76px;
-    padding: 60px 124px 60px 80px;
+    padding: 62px 124px 67px 80px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -211,7 +103,7 @@
     width: 245px;
     flex-direction: column;
     justify-content: center;
-    padding: 58px 10px 45px;
+    padding: 60px 10px 40px;
     margin: 0;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
@@ -228,15 +120,15 @@
 
   @media screen and (min-width: $tablet-width) {
     margin: 0;
-    width: 80px;
-    height: 83px;
+    width: 79px;
+    height: 64px;
   }
 }
 
 .addition__promo-text {
   width: 161px;
   margin: 0 auto;
-  padding-top: 48px;
+  padding-top: 56px;
   font-family: "Arial", "Tahoma", sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -247,11 +139,12 @@
   @media screen and (min-width: $tablet-width) {
     padding-top: 0;
     margin: 0;
+    margin-top: 10px;
     text-align: left;
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-top: 46px;
+    margin-top: 59px;
     text-align: center;
   }
 }
