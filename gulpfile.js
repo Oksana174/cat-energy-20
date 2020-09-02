@@ -98,7 +98,7 @@ const images = () => {
       imagemin.mozjpeg({quality: 90, progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("source/img"));
 }
 exports.images = images;
 
@@ -117,7 +117,7 @@ const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 }
 exports.sprite = sprite;
 
@@ -150,6 +150,7 @@ const build = gulp.series(
   copy,
   styles,
   html,
+  sprite,
   scripts
 );
 exports.build = build;

@@ -408,16 +408,11 @@
     outline: none;
   }
 
-  &:-moz-placeholder,
-  &::-moz-placeholder {
-    color: $special_dark-grey;
-    opacity: 1;
-  }
-
   &::placeholder {
     text-transform: uppercase;
     color: $special_dark-grey;
     font-size: 16px;
+    opacity: 1;
   }
 
   &--name {
@@ -636,6 +631,7 @@
   &::placeholder {
     text-transform: uppercase;
     color: $special_dark-grey;
+    opacity: 1;
   }
 
   @media screen and (min-width: $tablet-width) {

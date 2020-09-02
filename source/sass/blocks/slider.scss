@@ -130,7 +130,7 @@
     background-color: $white-color;
     border: 1px solid $special_grey;
     border-radius: 50%;
-    filter: drop-shadow(0 1px 3px transparentize($black-color, 0.16));
+    filter: drop-shadow(0 1px 3px rgba($black-color, 0.16));
 
     &::before {
       content: "";
@@ -144,11 +144,11 @@
     }
 
     &:hover {
-      filter: drop-shadow(0 2px 4px transparentize($black-color, 0.19));
+      filter: drop-shadow(0 2px 4px rgba($black-color, 0.19));
     }
 
     &:active {
-      filter: drop-shadow(0 3px 5px transparentize($black-color, 0.2));
+      filter: drop-shadow(0 3px 5px rgba($black-color, 0.2));
       border-color: $basic_green;
 
       &::before {
