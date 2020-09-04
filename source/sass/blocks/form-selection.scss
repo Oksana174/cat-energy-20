@@ -16,9 +16,10 @@
 
 .form-selection__descr {
   width: 226px;
+  min-height: 36px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   @media screen and (min-width: $tablet-width) {
     width: 390px;
@@ -34,11 +35,11 @@
 }
 
 .form-selection__wrapper {
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 
   @media screen and (min-width: $tablet-width) {
     margin: 0;
-    margin-left: 40px;
+    margin-left: 42px;
     margin-bottom: 75px;
     width: 630px;
   }
@@ -138,7 +139,7 @@
   &--location-comment {
     position: relative;
     padding-right: 22px;
-    margin-bottom: 35px;
+    margin-bottom: 34px;
 
     &::after {
       content: "";
@@ -241,12 +242,20 @@
     padding-left: 0;
 
     &--location-contact {
+      &::after {
+        width: calc(100vw - 100% - 119px);
+      }
+
       &::before {
         right: calc(100% + 40px);
       }
     }
 
     &--location-comment {
+      &::after {
+        width: calc(100vw - 100% - 119px);
+      }
+
       &::before {
         right: calc(100% + 40px);
       }
@@ -254,6 +263,10 @@
 
     &--location-option {
       margin-bottom: 58px;
+
+      &::after {
+        width: calc(100vw - 100% - 119px);
+      }
 
       &::before {
         right: calc(100% + 40px);
@@ -399,9 +412,9 @@
 }
 
 .form-selection__input {
-  padding: 13px 15px 12px;
+  padding: 10px 15px 10px;
   border: 1px solid $grey_form;
-  cursor: pointer;
+  line-height: 1;
 
   &:valid {
     border-color: $grey_form;
@@ -446,7 +459,18 @@
     border-color: $special_grey;
   }
 
+  &:focus,
+  &:focus:valid {
+    outline: 2px solid $special_dark-grey;
+    border-color: $special_dark-grey;
+  }
+
+  &:focus + .form-selection__icon {
+    fill: $basic_green;
+  }
+
   &:invalid:focus {
+    outline: 2px solid $basic_red;
     border-color: $basic_red;
   }
 
@@ -454,23 +478,8 @@
     fill: $basic_red;
   }
 
-  &:focus {
-    border-color: $special_dark-grey;
-    outline: none;
-  }
-
-  &:active:invalid,
-  &:active:valid {
-    outline: 2px solid $special_dark-grey;
-    border-color: $special_dark-grey;
-  }
-
-  &:active:focus + .form-selection__icon {
-    fill: $basic_green;
-  }
-
   @media screen and (min-width: $tablet-width) {
-    padding: 14px 18px;
+    padding: 10px 14px 11px 19px;
 
     &::placeholder {
       font-size: 20px;
@@ -539,6 +548,10 @@
 
     @media screen and (min-width: $tablet-width) {
       top: 19px;
+      right: 17px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
       right: 20px;
     }
   }
@@ -623,7 +636,7 @@
 .form-selection__comment {
   width: 280px;
   border: 1px solid $grey_form;
-  padding: 13px 8px 48px 15px;
+  padding: 13px 8px 47px 15px;
   font-size: 16px;
   line-height: 18px;
   color: $special_dark-grey;
@@ -632,6 +645,15 @@
     text-transform: uppercase;
     color: $special_dark-grey;
     opacity: 1;
+  }
+
+  &:hover {
+    border-color: $special_grey;
+  }
+
+  &:focus {
+    outline: 2px solid $special_dark-grey;
+    border-color: $special_dark-grey;
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -705,7 +727,7 @@
 }
 
 .form-selection__block {
-  margin-top: 39px;
+  margin-top: 40px;
   margin-bottom: 32px;
 
   @media screen and (min-width: $tablet-width) {
@@ -727,7 +749,7 @@
 .form-selection__btn {
   border: none;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 19px;
   cursor: pointer;
 
   @media screen and (min-width: $tablet-width) {

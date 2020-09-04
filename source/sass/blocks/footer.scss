@@ -4,8 +4,12 @@
   background-color: $basic_grey;
 
   @media screen and (min-width: $tablet-width) {
-    padding-top: 57px;
+    padding-top: 55px;
     padding-bottom: 61px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    padding-top: 58px;
   }
 }
 
@@ -54,7 +58,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 22px;
+  padding-top: 21px;
 
   @media screen and (min-width: $tablet-width) {
     width: 163px;

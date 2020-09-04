@@ -8,7 +8,7 @@
       display: block;
     }
 
-    &--nojs .hamburger {
+    &--nojs &__hamburger {
       display: none;
     }
 
@@ -18,18 +18,50 @@
   }
 }
 
+.main-nav__hamburger {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 20px;
+  width: 24px;
+  height: 25px;
+  background-color: $white-color;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+
+  &--active {
+    top: 11px;
+    right: 0;
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__hamburger {
+  background: url("../img/icon-mobile-menu.svg") center center no-repeat;
+  background-size: 24px 16px;
+}
+
+.main-nav--opened .main-nav__hamburger {
+  background: url("../img/icon-close.svg") center center no-repeat;
+  background-size: 18px 18px;
+}
+
 .main-nav__list {
   @media screen and (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 440px;
+    width: 438px;
     padding-top: 42px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 480px;
-    padding-top: 69px;
+    width: 478px;
+    padding-top: 71px;
   }
 }

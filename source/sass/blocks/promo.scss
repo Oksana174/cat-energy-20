@@ -14,14 +14,16 @@
   }
 
   &--background {
-    background: url("../img/index-can-mobile@1x.png") center top 167px  no-repeat, url("../img/index-background-mobile@1x.jpg") center top no-repeat;
+    @media screen and (max-width: $mobile-width-only) {
+      background: url("../img/index-can-mobile@1x.png") center top 167px  no-repeat, url("../img/index-background-mobile@1x.jpg") center top no-repeat;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/index-can-mobile@2x.png"), url("../img/index-background-mobile@2x.jpg");
-      background-size: 280px auto, 320px 305px;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-can-mobile@2x.png"), url("../img/index-background-mobile@2x.jpg");
+        background-size: 280px auto, 320px 305px;
+      }
     }
 
-    @media screen and (min-width: $tablet-width) {
+    @media screen and (min-width: $tablet-width) and (max-width: $desktop-width-only) {
       background: url("../img/index-can-tablet@1x.jpg") center bottom no-repeat;
 
       @media (min-resolution: 2dppx) {
@@ -94,7 +96,7 @@
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-top: 39px;
+    margin-top: 40px;
   }
 }
 

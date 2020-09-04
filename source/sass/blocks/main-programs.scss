@@ -9,13 +9,13 @@
 .main-programs__block {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 auto;
 
   @media screen and (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 82px;
+    margin-top: 80px;
   }
 }
 

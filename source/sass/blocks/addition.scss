@@ -12,8 +12,8 @@
     content: "";
     position: absolute;
     top: 14px;
-    left: 100%;
-    width: 53px;
+    left: 99%;
+    width: calc(100vw - 100% - 18px);
     height: 2px;
     background-color: $basic_green;
   }
@@ -22,7 +22,7 @@
     width: 410px;
     font-size: 36px;
     line-height: 36px;
-    margin: 69px 0 80px;
+    margin: 67px 0 80px;
     padding-left: 37px;
 
     &::before {
@@ -37,12 +37,12 @@
 
     &::after {
       top: 22px;
-      width: 328px;
+      width: calc(100vw - 100% - 34px);
     }
   }
 
   @media screen and (min-width: $desktop-width) {
-    margin-top: 75px;
+    margin-top: 74px;
     padding-left: 0;
 
     &::before {
@@ -51,7 +51,8 @@
 
     &::after {
       left: 91%;
-      width: 954px;
+      // width: 954px;
+      width: calc(100vw - 100% - 82px);
     }
   }
 }

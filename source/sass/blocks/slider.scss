@@ -6,16 +6,16 @@
 
 
   @media screen and (min-width: $tablet-width) {
-    width: 708px;
+    width: 100%;
     min-height: 524px;
+    margin-top: 82px;
     margin-left: 8px;
-    margin-top: 86px;
   }
 
   @media screen and (min-width: $desktop-width) {
-    width: 690px;
-    min-height: 517px;
+    min-height: 513px;
     margin-top: 0;
+    margin-left: 0;
   }
 }
 
@@ -40,12 +40,13 @@
   margin-top: 33px;
 
   @media screen and (min-width: $tablet-width) {
-    margin-top: 3px;
+    margin-top: 4px;
   }
 
   @media screen and (min-width: $desktop-width) {
+    justify-content: flex-start;
     margin-top: 28px;
-    margin-left: 57px;
+    margin-left: 66px;
   }
 }
 
@@ -65,16 +66,16 @@
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted $special_grey;
-    padding: 5px 0 0;
+    padding: 5px 0 2px;
 
     &:hover {
-      border-bottom-style: solid;
-      border-bottom-color: transparentize($black-color, 0.3);
+      border-bottom: 1px solid rgba($black-color, 0.4);
     }
 
     &:active {
       border-bottom: none;
       outline: none;
+      padding-bottom: 3px;
     }
   }
 

@@ -151,13 +151,15 @@
 
 .program__descr {
   width: 227px;
+  min-height: 90px;
   margin: 0;
-  margin-top: 31px;
+  margin-top: 29px;
   font-family: "Arial", "Tahoma", sans-serif;
   color: $special_dark-grey;
 
   @media screen and (min-width: $tablet-width) {
     width: 377px;
+    min-height: 96px;
     margin-top: 24px;
     font-size: 16px;
     line-height: 24px;
@@ -170,6 +172,7 @@
 
   @media screen and (min-width: $desktop-width) {
     width: 467px;
+    min-height: 72px;
     margin-top: 73px;
 
     &--size {
