@@ -2357,14 +2357,14 @@ a {
   .form-selection__input:hover {
     border-color: #cdcdcd; }
   .form-selection__input:focus, .form-selection__input:focus:valid {
-    outline: 2px solid #444444;
+    outline: 1px solid #444444;
     border-color: #444444; }
   .form-selection__input:focus + .form-selection__icon {
     fill: #68b738; }
-  .form-selection__input:invalid:focus {
-    outline: 2px solid #ff8282;
+  .form-selection__input--error:invalid:focus {
+    outline: 1px solid #ff8282;
     border-color: #ff8282; }
-  .form-selection__input:invalid:focus + .form-selection__icon {
+  .form-selection__input--error:invalid:focus + .form-selection__icon {
     fill: #ff8282; }
   @media screen and (min-width: 768px) {
     .form-selection__input {

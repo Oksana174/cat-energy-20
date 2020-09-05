@@ -461,7 +461,7 @@
 
   &:focus,
   &:focus:valid {
-    outline: 2px solid $special_dark-grey;
+    outline: 1px solid $special_dark-grey;
     border-color: $special_dark-grey;
   }
 
@@ -469,13 +469,16 @@
     fill: $basic_green;
   }
 
-  &:invalid:focus {
-    outline: 2px solid $basic_red;
-    border-color: $basic_red;
-  }
+  // класс для оформления ошибок в js
+  &--error {
+    &:invalid:focus {
+      outline: 1px solid $basic_red;
+      border-color: $basic_red;
+    }
 
-  &:invalid:focus + .form-selection__icon {
-    fill: $basic_red;
+    &:invalid:focus + .form-selection__icon {
+      fill: $basic_red;
+    }
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -652,7 +655,7 @@
   }
 
   &:focus {
-    outline: 2px solid $special_dark-grey;
+    outline: 1px solid $special_dark-grey;
     border-color: $special_dark-grey;
   }
 
