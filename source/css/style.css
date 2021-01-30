@@ -2489,7 +2489,7 @@ a {
   .form-selection__comment:hover {
     border-color: #cdcdcd; }
   .form-selection__comment:focus {
-    outline: 2px solid #444444;
+    outline: 1px solid #444444;
     border-color: #444444; }
   @media screen and (min-width: 768px) {
     .form-selection__comment {

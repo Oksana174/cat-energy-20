@@ -24,6 +24,8 @@
 
   @media screen and (max-width: $mobile-width-only) {
     padding-right: 10px;
+    width: 280px;
+    margin: 0 auto;
   }
 
   @media screen and (min-width: $tablet-width) {
