@@ -818,7 +818,9 @@ a {
   margin-bottom: 20px; }
   @media screen and (max-width: 767px) {
     .main-programs__wrapper {
-      padding-right: 10px; } }
+      padding-right: 10px;
+      width: 280px;
+      margin: 0 auto; } }
   @media screen and (min-width: 768px) {
     .main-programs__wrapper {
       margin-bottom: 30px; } }
